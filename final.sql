@@ -49,7 +49,17 @@ SELECT SUBSTR(league, 1, INSTR(league, " ") - 1) AS country,
 FROM big5;
 
 
+/*
+I will use the Player and Player_Attributes tables to incorporate some of the
+FIFA game data (specifically overall rating and preferred_foot). I will now
+create a JOINed table with the following columns:
 
+• player_name
+• birth_date
+• height(INT)
+• preferred_foot
+• overall_rating
+*/
 SELECT pa.player_fifa_api_id AS fifa_id,
        pl.player_name AS player,
        pl.birthday AS birth_date,
