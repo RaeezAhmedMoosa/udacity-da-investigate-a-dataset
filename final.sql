@@ -1,3 +1,18 @@
+/*
+This query uses a Subquery in the form of a Common Table Expression (CTE). The
+CTE starts at Line 16 and ends at Line 36. The CTE contains a table which is
+made up from the joining of multiple tables found in database.sqlite.
+
+The CTE table has been filtered (Lines 34 - 35) to only return rows for the
+Big 5 Leagues (England, France, Germany, Italy & Spain).
+
+The final table creates a new column "country" using the SUBSTR function. Also,
+the final table uses the SUBSTR function to create cleaner versions of the
+"league" and "date" columns.
+
+The final table is the database that will be exported as a csv file from within
+the DB Browser software to be used as match data in a pandas DataFrame.
+*/
 WITH big5 AS
 (
   SELECT lg.name AS league,
