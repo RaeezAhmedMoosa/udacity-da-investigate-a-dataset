@@ -47,3 +47,15 @@ SELECT SUBSTR(league, 1, INSTR(league, " ") - 1) AS country,
        shots_on_goal,
        possession
 FROM big5;
+
+
+
+SELECT pa.player_fifa_api_id AS fifa_id,
+       pl.player_name AS player,
+       pl.birthday AS birth_date,
+       ROUND(pl.height, 0) AS height,
+       pa.preferred_foot,
+       pa.overall_rating AS rating
+FROM Player pl
+JOIN Player_Attributes pa
+ON pl.player_fifa_api_id = pa.player_fifa_api_id;
