@@ -1,0 +1,31 @@
+#################
+# Database files#
+#################
+*.sql
+*.sqlite
+
+
+#################
+# PDF Documents #
+#################
+test.pdf
+
+
+##############
+# Test Files #
+##############
+test-files/*
+
+.ipynb_checkpoints/
+
+#############
+# Zip files #
+#############
+*.zip
+*.rar
+
+#######################
+# Final Project Files #
+#######################
+soccer-db-final.ipynb
+final-files/*
